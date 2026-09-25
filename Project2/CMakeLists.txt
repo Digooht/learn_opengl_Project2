@@ -1,0 +1,43 @@
+#需求的最低cmake程序版本
+
+cmake_minimum_required(VERSION 3.12)
+
+
+
+#本工程的名字
+
+project(Project2)
+
+
+
+#本工程支持的C++版本
+
+set(CMAKE_CXX_STANDARD 17)
+
+
+
+#往项目中加入一个全局的预编译宏
+
+add_definitions(-DDEBUG)
+
+
+
+include_directories(system ${ CMAKE_CURRENT_SOURCE_DIR } / thirdParty / include)
+
+
+
+link_directories(system ${ CMAKE_CURRENT_SOURCE_DIR } / thirdParty / lib)
+
+
+
+add_subdirectory(wrapper)
+
+
+
+#本工程所有cpp文件编译链接，生成exe
+
+add_executable(glStudy "main.cpp" "glad.c")
+
+
+
+target_link_libraries(glStudy glfw3.lib wrapper)

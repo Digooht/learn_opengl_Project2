@@ -146,6 +146,10 @@
   <ItemGroup>
     <ClCompile Include="D:\glad\src\glad.c" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="wrapper\checkError.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="wrapper\checkError.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
